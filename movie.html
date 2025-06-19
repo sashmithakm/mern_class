@@ -2,43 +2,174 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <title>Movie Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #d0e1f9, #f9f9f9);
+    }
+
+    .movie-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .movie-box {
+      position: relative;
+      border-radius: 14px;
+      background-size: cover;
+      background-position: center;
+      min-height: 460px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: grid;
+      grid-template-areas:
+        "title title"
+        "cast production"
+        "summary summary";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto 1fr;
+      padding: 20px;
+      color: white;
+    }
+
+    .movie-box::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .movie-box > * {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .title {
+      grid-area: title;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 600;
+      background: transparent;
+      padding: 0;
+    }
+
+    .cast {
+      grid-area: cast;
+      font-size: 14px;
+    }
+
+    .production {
+      grid-area: production;
+      font-size: 14px;
+    }
+
+    .summary {
+      grid-area: summary;
+      font-size: 13.5px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
 
   <div class="movie-container">
-    <div class="movie-box">
-      <h2>Inception</h2>
-      <div class="content">
-        <p>Inception is a science fiction film directed by Christopher Nolan that explores the concept of entering and manipulating people’s dreams. Dom Cobb is a skilled thief who specializes in stealing secrets from within the subconscious during dream states. He’s given a challenging task: plant an idea in someone’s mind, known as “inception.” The film combines mind-bending visuals, layered storytelling, and emotional depth. With brilliant performances and complex narrative structure, it keeps audiences guessing. Inception challenges reality, dreams, and time, making it one of the most thought-provoking and visually stunning films of modern cinema.</p>
+
+    <div class="movie-box" style="background-image: url('https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg');">
+      <div class="title">Inception</div>
+      <div class="cast">
+        <strong>Cast</strong>
+        Leonardo DiCaprio<br>Joseph Gordon-Levitt
+      </div>
+      <div class="production">
+        <strong>Production</strong>
+        Warner Bros.<br>Legendary Pictures
+      </div>
+      <div class="summary">
+        <strong>Summary</strong>
+        Dom Cobb is a skilled thief who steals secrets from dreams. He must plant an idea in a target’s mind, leading to a visually stunning journey through layered realities.
       </div>
     </div>
 
-    <div class="movie-box">
-      <h2>Interstellar</h2>
-      <div class="content">
-        <p>Interstellar follows a team of astronauts led by Cooper as they travel through a wormhole in search of a new home for humanity. Earth is dying, and time is running out. Directed by Christopher Nolan, this film combines hard science with emotional storytelling. It explores themes of love, time dilation, sacrifice, and survival. The stunning visuals of space and black holes, coupled with Hans Zimmer’s powerful score, make it an unforgettable cinematic journey. Interstellar isn’t just science fiction—it’s a profound tale about what connects us and how far we’ll go for the ones we love.</p>
+    <div class="movie-box" style="background-image: url('https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg');">
+      <div class="title">The Dark Knight</div>
+      <div class="cast">
+        <strong>Cast</strong>
+        Christian Bale<br>Heath Ledger
+      </div>
+      <div class="production">
+        <strong>Production</strong>
+        Warner Bros.<br>DC Entertainment
+      </div>
+      <div class="summary">
+        <strong>Summary</strong>
+        Batman faces the Joker, a madman threatening Gotham. With moral dilemmas and iconic performances, it redefined superhero cinema.
       </div>
     </div>
 
-    <div class="movie-box">
-      <h2>The Dark Knight</h2>
-      <div class="content">
-        <p>The Dark Knight is a gripping superhero crime thriller featuring Batman as he battles the Joker, a chaotic and ruthless villain who wants to break Gotham’s spirit. With incredible performances—especially Heath Ledger’s iconic portrayal of the Joker—the film dives deep into the psychology of good vs. evil. Christopher Nolan creates a dark, realistic Gotham filled with moral dilemmas. The film explores justice, sacrifice, and what it means to be a hero in a corrupt world. It’s more than a superhero movie; it’s a cinematic masterpiece that redefined what comic-book adaptations could achieve.</p>
+    <div class="movie-box" style="background-image: url('https://image.tmdb.org/t/p/w500/6EiRUJpuoeQPghrs3YNktfnqOVh.jpg');">
+      <div class="title">Avatar</div>
+      <div class="cast">
+        <strong>Cast</strong>
+        Sam Worthington<br>Zoe Saldana
+      </div>
+      <div class="production">
+        <strong>Production</strong>
+        20th Century Fox<br>Lightstorm Entertainment
+      </div>
+      <div class="summary">
+        <strong>Summary</strong>
+        On Pandora, a marine becomes one with the native Na'vi. Stunning visuals and emotional storytelling make this a landmark film.
       </div>
     </div>
 
-    <div class="movie-box">
-      <h2>Tenet</h2>
-      <div class="content">
-        <p>Tenet is a sci-fi action thriller that introduces the concept of time inversion, where people and objects move backward in time. The Protagonist, played by John David Washington, embarks on a mission to prevent global catastrophe. Directed by Christopher Nolan, the film challenges viewers with complex timelines, paradoxes, and intense action sequences. Tenet demands attention and multiple viewings to fully grasp its unique mechanics. The visuals, music, and concept make it an intellectual and visual treat. It’s a film that rewards patience, puzzling the mind while delivering high-stakes espionage in a world where time flows both ways.</p>
+    <div class="movie-box" style="background-image: url('https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg');">
+      <div class="title">Interstellar</div>
+      <div class="cast">
+        <strong>Cast</strong>
+        Matthew McConaughey<br>Anne Hathaway
+      </div>
+      <div class="production">
+        <strong>Production</strong>
+        Paramount Pictures<br>Warner Bros.
+      </div>
+      <div class="summary">
+        <strong>Summary</strong>
+        Earth is dying. A team travels through a wormhole to find a new home. A masterpiece blending science, emotion, and time with breathtaking visuals.
       </div>
     </div>
 
-    <div class="movie-box">
-      <h2>Avatar</h2>
-      <div class="content">
-        <p>Avatar, directed by James Cameron, transports viewers to the lush alien world of Pandora. The story follows Jake Sully, a disabled former Marine who becomes part of the Na’vi through an avatar body. As he learns their ways, he grows to love their people and planet. The film explores themes of colonization, nature, and identity. With groundbreaking visual effects and immersive 3D experience, Avatar set new standards for cinematic storytelling. It’s not just a visual feast, but also a reflection on harmony with nature and the consequences of human greed. A film that’s epic in scale and heart.</p>
+    <div class="movie-box" style="background-image: url('https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg');">
+      <div class="title">Tenet</div>
+      <div class="cast">
+        <strong>Cast</strong>
+        John David Washington<br>Robert Pattinson
+      </div>
+      <div class="production">
+        <strong>Production</strong>
+        Warner Bros.<br>Syncopy
+      </div>
+      <div class="summary">
+        <strong>Summary</strong>
+        A secret agent uses time inversion to prevent World War III. Complex, thrilling, and mind-bending from start to finish.
       </div>
     </div>
 
@@ -46,3 +177,8 @@
 
 </body>
 </html>
+
+
+
+
+
