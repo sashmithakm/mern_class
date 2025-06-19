@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Pursuit of Happyness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #d0e1f9, #f9f9f9);
+    }
+
+    .grid-container {
+      max-width: 950px;
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "poster title title"
+        "production production production"
+        "cast summary summary";
+      gap: 18px;
+      padding: 15px;
+    }
+
+    .box {
+      background: white;
+      border-radius: 10px;
+      padding: 18px;
+      color: #333;
+      font-size: 15px;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 160px;
+    }
+
+    .poster {
+      grid-area: poster;
+      background-image: url('https://upload.wikimedia.org/wikipedia/en/8/81/Poster-pursuithappyness.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 260px;
+    }
+
+    .title {
+      grid-area: title;
+      font-size: 18px;
+      flex-direction: column;
+      min-height: 260px;
+    }
+
+    .production {
+      grid-area: production;
+    }
+
+    .cast {
+      grid-area: cast;
+    }
+
+    .summary {
+      grid-area: summary;
+      font-size: 14.5px;
+      text-align: justify;
+      line-height: 1.6;
+      padding: 20px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="box poster"></div>
+
+    <div class="box title">
+      <div>
+        <strong>The Pursuit of Happyness</strong><br>
+        <span style="font-weight: normal;">(2006)</span>
+      </div>
+    </div>
+
+    <div class="box production">
+      <div>
+        <strong>Production</strong><br>
+        Escape Artists<br>
+        Overbrook Entertainment
+      </div>
+    </div>
+
+    <div class="box cast">
+      <div>
+        <strong>Cast</strong><br>
+        Will Smith<br>
+        Jaden Smith
+      </div>
+    </div>
+
+    <div class="box summary">
+      <strong>Summary</strong><br><br>
+      <em>The Pursuit of Happyness</em> tells the emotional journey of Chris Gardner, 
+      a determined father navigating homelessness while raising his young son. 
+      Through incredible perseverance and love, he secures a life-changing opportunity. 
+      A powerful story about hope, family, and never giving up.
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
