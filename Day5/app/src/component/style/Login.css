@@ -1,0 +1,86 @@
+/*.login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}*/
+/* Login.css */
+/*.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.login{
+  font-size: 32px;
+  font-weight: bold;
+  color: #1f2d3d;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  width: 220px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 4px;
+}*/
+/* outer wrapper (already centered in App.css) */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;                  /* space between logo‑area and form */
+}
+
+/* heading */
+.login-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1f2d3d;
+  margin: 0;
+}
+
+/* the form now stacks its children one‑by‑one */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;                  /* space between input fields */
+}
+
+/* inputs share the same width */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+}
+
+/* submit button */
+.login-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 4px;
+}
+
+/* optional error text */
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
